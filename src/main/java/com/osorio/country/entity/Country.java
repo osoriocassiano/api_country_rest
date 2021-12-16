@@ -7,10 +7,10 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 public class Country {
 	@Id
-	//@GeneratedValue(strategy = GenerationType.AUTO)
-	//@Column(nullable = false, updatable = false)
-	@GeneratedValue(generator = "increment")
-	@GenericGenerator(name = "increment", strategy = "increment")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(nullable = false, updatable = false)
+	//@GeneratedValue(generator = "increment")
+	//@GenericGenerator(name = "increment", strategy = "increment")
 	private Long id;
 	private String name;
 	private String capital;
