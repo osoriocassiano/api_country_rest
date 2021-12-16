@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "99b47093-a98f-4182-97a0-bc3a4fcfb648",
+		"name": "COUNTRY_REST_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "country",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/country/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"country",
+								"all"
+							]
+						},
+						"description": "Este end-point retorna todos os objectos existentes na base de dados que sao os paises."
+					},
+					"response": []
+				},
+				{
+					"name": "getAllByProperty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/country/all/name",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"country",
+								"all",
+								"name"
+							]
+						},
+						"description": "Este end-point devolve uma lista de paises ordenado pela propriedade(parametro) informada na requiscao. As opcoes ou propriedades que podem ser informadas sao:\n\n*   name;\n*   capital;\n*   region;\n*   sub\\_region;\n*   area;"
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/country/find/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"country",
+								"find",
+								"1"
+							]
+						},
+						"description": "Este end-point retorna um objecto correspondente ao identificador informado como parametro da requisicao (id)."
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"name\": \"South Africa 2\",\r\n    \"capital\": \"Cape Town\",\r\n    \"region\": \"Africa Austral\",\r\n    \"subRegion\": \"Africa Austral\",\r\n    \"area\": 123456789\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/country/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"country",
+								"update"
+							]
+						},
+						"description": "Este end-point actualiza o objecto inofrmado no corpo da requisicao. E obrigatorio que dentro do corpo da reuisicao (JSON) se informe o id do Objecto. Exemplo do corpo da rquisicao:\n\n```\n{\n  \"id\": 4,\n  \"name\": \"South Africa 2\",\n  \"capital\": \"Cape Town\",\n  \"region\": \"Africa Austral\",\n  \"subRegion\": \"Africa Austral\",\n  \"area\": 123456789\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/country/delete/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"country",
+								"delete",
+								"7"
+							]
+						},
+						"description": "Este edn-point remove o objecto correspondente ao ID informado na requisicao como parametro."
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Egipto\",\r\n    \"capital\": \"Cairo\",\r\n    \"region\": \"Africa Ocidental\",\r\n    \"subRegion\": \"Africa Ocidental\",\r\n    \"area\": 123456789\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/country/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"country",
+								"add"
+							]
+						},
+						"description": "Este end-point adiciona um novo objecto."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
